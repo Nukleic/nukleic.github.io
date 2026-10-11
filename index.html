@@ -2,6 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <!-- INI SENSOR HP (Biar ukuran web murni 100% di layar HP) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Profil Anak Konstruksi</title>
   <style>
     body {
@@ -12,15 +15,14 @@
       padding-top: 100px;
     }
 
-    /* Ini yang bikin posisinya ke samping */
     .bungkus-utama {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 50px;
+      padding: 20px; /* Biar ada jarak dari pinggir layar */
     }
 
-    /* Ini yang ngunci foto biar bulat sempurna */
     img {
       width: 250px;
       height: 250px;
@@ -29,7 +31,6 @@
       border: 4px solid #0d6efd;
     }
 
-    /* Ini yang bikin teks rata kiri */
     .bagian-teks {
       text-align: left;
       max-width: 500px;
@@ -45,12 +46,29 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
+    /* --- SIHIR KHUSUS LAYAR HP (Responsive Design) --- */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 40px; /* Jarak atas disesuaikan biar gak terlalu ke atas */
+      }
+      .bungkus-utama {
+        flex-direction: column; /* Ubah formasi jadi atas-bawah */
+        gap: 20px; /* Jarak foto dan tulisan dideketin */
+      }
+      .bagian-teks {
+        text-align: center; /* Tulisan dirapikan rata tengah */
+      }
+      img {
+        width: 200px; /* Foto sedikit dikecilin biar pas di HP */
+        height: 200px;
+      }
+    }
   </style>
 </head>
 <body>
 
   <div class="bungkus-utama">
-    <!-- Pastikan nama foto lu di folder adalah profil.jpg -->
     <img src="profil.jpg" alt="Foto Profil">
     
     <div class="bagian-teks">
