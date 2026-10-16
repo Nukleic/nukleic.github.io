@@ -5,7 +5,7 @@
   <!-- INI SENSOR HP (Biar ukuran web murni 100% di layar HP) -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Profil Anak Konstruksi</title>
+  <title>Learning Web Development</title>
   <style>
     body {
       background-color: #1e1e1e;
@@ -37,15 +37,19 @@
     }
 
     button {
-      background-color: #0d6efd;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.bagian-teks a {
+  width: 100%;
+}
 
     /* --- SIHIR KHUSUS LAYAR HP (Responsive Design) --- */
     @media (max-width: 768px) {
@@ -57,13 +61,24 @@
         gap: 20px; /* Jarak foto dan tulisan dideketin */
       }
       .bagian-teks {
-        text-align: center; /* Tulisan dirapikan rata tengah */
-      }
+        display: flex; /* Aktifin sihir Flexbox di bagian teks */
+        flex-direction: column; /* Paksa barisnya ke bawah (vertikal) */
+        align-items: flex-start; /* Bikin semua tulisan & tombol rata kiri */
+        gap: 15px; /* Ini dia jurus pemisahnya! Bikin jarak 15px antar elemen */
+        max-width: 500px;
+}
       img {
         width: 200px; /* Foto sedikit dikecilin biar pas di HP */
         height: 200px;
       }
     }
+    .tombol-wa {
+  background-color: #25d366; /* Ini kode warna hijau WhatsApp */
+}
+
+.tombol-wa:hover {
+  background-color: #20bd5c; /* Hijau agak gelap pas kursor nempel */
+}
   </style>
 </head>
 <body>
@@ -72,12 +87,14 @@
     <img src="profil.jpg" alt="Foto Profil">
     
     <div class="bagian-teks">
-      <h1>Proyek web portofolio anak konstruksi!</h1>
-      <p>Pindah dari ngaduk semen ke ngaduk kode. Gas!</p>
+      <h1>Learning HTML, CSS, JavaScript</h1>
+      <p>Learning web development with HTML, CSS, and JavaScript</p>
       <a href="https://instagram.com/ranggadwiss" target="_blank">
-        <button>Mampir ke Instagram Gua</button>
+        <button>Follow Me</button>
       </a>
-    </div>
+      <a href="https://wa.me/6281901823292" target="_blank">
+        <button class="tombol-wa">My WhatsApp</button>
+      </a>
   </div>
 
 </body>
